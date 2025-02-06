@@ -3,8 +3,8 @@ package com.example.numbersapi.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data
-@AllArgsConstructor
+//@Data
+//@AllArgsConstructor
 public class ErrorResponse {
     public String number;
     public boolean error;

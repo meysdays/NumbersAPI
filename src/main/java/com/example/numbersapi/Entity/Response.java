@@ -2,8 +2,8 @@ package com.example.numbersapi.Entity;
 
 import lombok.*;
 
-@Data
-@AllArgsConstructor
+//@Data
+//@AllArgsConstructor
 public class Response {
     public int number;
     public boolean is_prime;
