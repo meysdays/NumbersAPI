@@ -1,6 +1,6 @@
 # Simple Spring Boot API
 
-This is a simple Spring Boot API that provides fun fact about an integer and checks for a basic endpoint returning basic information such as email, the current time and the URL for this page. This guide will help you set up and run the application locally.
+This is a simple Spring Boot API that provides fun fact about an integer and for information such as prime, perfect number, armstrong, even and odd number, and the sum of the integers. This guide will help you set up and run the application locally.
 
 ## Prerequisites
 
