@@ -15,7 +15,7 @@ public class GetNumberService {
         int num = number;
         boolean prime = isPrime(number);
         boolean perfect = isPerfectNumber(number);
-        String[] properties = {isArmstrongNumber(number), isEvenOdd(number)};
+        String[] properties = isArmstrongNumber(number);
         int sum = sumOfDigits(number);
         String fun = getData(number);
 
@@ -23,7 +23,7 @@ public class GetNumberService {
     }
 
     public String getData(int num) {
-        String url = "http://numbersapi.com/"+num;
+        String url = "http://numbersapi.com/"+num+"/math";
         return restTemplate.getForObject(url, String.class);
     }
 
@@ -56,7 +56,7 @@ public class GetNumberService {
         return sum == num;
     }
 
-    public static String isArmstrongNumber(int num){
+    public static String[] isArmstrongNumber(int num){
         int absNum = num;
         int originalNum = absNum;
         int sum = 0;
@@ -68,10 +68,12 @@ public class GetNumberService {
             absNum /= 10; // Remove last digit
         }
 
+
         if(sum == originalNum){
-            return "armstrong";
+
+            return new String[]{"armstrong", isEvenOdd(num)};
         }
-        return "not armstrong";
+        return new String[]{isEvenOdd(num)};
     }
 
     public static String isEvenOdd(int num){
